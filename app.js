@@ -2,62 +2,24 @@ const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSoVsWLs_Ww7ffH
 const ATN_VOTE_API_URL = "https://script.google.com/macros/s/AKfycbw41nr9MIPqhSDur_jMx4H8zC8actmrR1jgE2rQLEYTYK2DJRtBmdx__Ng_AgP4GHIJ/exec";
 
 const ATN_TITLES = [
-  {
-    title: "Avant l'Aube",
-    image: "https://lh7-rt.googleusercontent.com/formsz/AN7BsVCnaMSRBkXaS2_2cv3i-MMCLMbEZzhxsmyIOO-vFzxLZ_mynQILBvt5mmWUJ3JmSr562dkvYkZMDaj2G4is6zMWjXTx2HY3kyAO1fUrY5E_1uaatBYbWpYqHhqAfvoeoQsO0bbbZLW12j1BgjqbzJRlP5LiflFChHPA-qn0Gw=s2048?key=9sB5KGCgr7SA4UzQBsPuaA",
-    votes: 3
-  },
-  {
-    title: "Laissez-moi brûler",
-    image: "https://lh7-rt.googleusercontent.com/formsz/AN7BsVAkakZlXCf0ZQ1RtnDkMZ_mAdxnriEq54kBpmK13ONtgt8qLkiwChDQ2xW44mbwf8qGNdpY-WiWkihuKMaFd3iRwyjmHxJoYCna6Hp42JcH4sB6XJinQA9WGb1BFhqaon3kHt2T60pZQcYAi-oUBgUpcHTa5mdS2vQt5OPivA=s2048?key=9sB5KGCgr7SA4UzQBsPuaA",
-    votes: 3
-  },
-  {
-    title: "Touche pas à ma soeur",
-    image: "https://lh7-rt.googleusercontent.com/formsz/AN7BsVABiCCkeOLP4wf3XqiTreKT-zJc8WbkUBrGCc24UZz6BwZEjx4afV_jkiCV7_2I5bL3jHt6rPInl4r5ph_bCgzy4nnzxzbB22jdjgwxdUOBZX07TF4qGxeqqv7vcERHbgYR8CIJdVQQwVVSA2JLx2nL2lGTt_4YrBqAzT0d=s2048?key=9sB5KGCgr7SA4UzQBsPuaA",
-    votes: 3
-  },
-  {
-    title: "Le Monde est plus grand",
-    image: "https://lh7-rt.googleusercontent.com/formsz/AN7BsVCmSCkmShmhbCokXYfceQg9oudB0AXB1JrZd9PZ-1DJ3raV-niLHlG3e1qUilJmCnrd0QRc0umX5V0oJiGdmpPjccKWdwFeMTmpf1nGxrcIylhkNQbjb7qgHQxD0je2vZ1rE2vPNXqUxi8izNg4jKtHq9BKHZxpQwwa7zt0AA=s2048?key=9sB5KGCgr7SA4UzQBsPuaA",
-    votes: 2
-  },
-  {
-    title: "Je suis rentré chez moi",
-    image: "https://lh7-rt.googleusercontent.com/formsz/AN7BsVDhCiWil_Fmg-ms6rhhlNX0iHfE-NQO0Qf691ylGB_RFnF12lVJvKWhN9v9lzOtK4B8F_ii_p9y0k_q-NolLZ12l1bsfIlc7IgNmwJ4frkYsCJnTTrt4024doUenRkj0a9hneStymSi76WCcjMVRIpP7OHOCGzvxeMln1z7yw=s2048?key=9sB5KGCgr7SA4UzQBsPuaA",
-    votes: 2
-  },
-  {
-    title: "Pourquoi on court ?",
-    image: "https://lh7-rt.googleusercontent.com/formsz/AN7BsVD_6xBeKB5F4k7Gx9Bp4EoUeWRpc2x9yWl3_kP7tqOBB7qMEpFul4igq_jsu4ATjbUjof2yEJbLptm2iFw6uM5gw6dPjgKHA00Js6OQo0CAmqyoe0yncqpaJiVgPBpMAX2N30q_nws6M0a6c5c5als5-dPzU_c_TpRoC2au3A=s2048?key=9sB5KGCgr7SA4UzQBsPuaA",
-    votes: 2
-  },
-  {
-    title: "J'veux sortir",
-    image: "https://lh7-rt.googleusercontent.com/formsz/AN7BsVDkhbh4E-pG1KyxRs0IzDFnDb5py4wwFbuggfVLz67sIQ5HbjiYhP1BcGJT6jJ9FfE_cpXXJ1dlL7uX-v1E8Y2szQ-hUBkAA8kFoyqkGc8bMhtZsq-CqhTtTpMw1x6pLRFGVJHqOJod4tzTwwTjkNDlgQkptEb3Sy-tsag3BQ=s2048?key=9sB5KGCgr7SA4UzQBsPuaA",
-    votes: 1
-  },
-  {
-    title: "Le bruit du silence",
-    image: "https://lh7-rt.googleusercontent.com/formsz/AN7BsVAbNBMeF9V2YSVoNjLu296wyLdhXEWHqXdBAzbo6KhahKxUzl55cNl60yrLMzMosOOucFpZOuaAj_Fx_Mk6bThJGDne6rGHjtkE1JpFwtRcaF8nNWkQqfUMvfvZuG773uaUYRCV0h_4AwVvPn77s5B_SxQ7AaNZ6Znz9aIaUw=s2048?key=9sB5KGCgr7SA4UzQBsPuaA",
-    votes: 1
-  },
-  {
-    title: "J'ai rampé hors du sous-sol",
-    image: "https://lh7-rt.googleusercontent.com/formsz/AN7BsVAT1R4kqHVASbqN8tuxtrqCghFmZr8osq9o-bvM6tro7Ycy9xNwuHHK51dEAD978wtzxlBIj2mefdfFqu2-74Y_npsemlZ3-hkOL3VZDIa_U8tX-bbryKAEt8Dm-_RXEBiiBz-5s5oC1azVEro2EVphVIgALHkeuLJIR41Vfw=s2048?key=9sB5KGCgr7SA4UzQBsPuaA",
-    votes: 1
-  },
-  {
-    title: "On se l'était dit",
-    image: "https://lh7-rt.googleusercontent.com/formsz/AN7BsVC3onJqYor6MZmDMxTEe0POoicbei4qUVzxMU-il_X2tZ8N-dr0r5ZOmyrtLTy9QJnGXcblyX6rep6_s8rbZQhlr4aDdE-MeOW--M7w3joIxR5reOs50lz_yfAWxSluZ88e5qjddAt6izzsy5qc3bKJEag_FKr5Yr1jvL182g=s2048?key=9sB5KGCgr7SA4UzQBsPuaA",
-    votes: 1
-  },
-  {
-    title: "J'ai oublié de vivre",
-    image: "https://lh7-rt.googleusercontent.com/formsz/AN7BsVBbYOwtp7AMjvA-HYIzTepFbqginmfeS4sAdJbFjvnw91AhMCHTskpFrXOuDZHQYeKhiu50q10NAbUvL8J1jm1EuXfEEmmcWQijIeZ78xBSKbH1n2lvNry9ZljCVeJC4EmXpykdlICVDkgjix451GC5utn9RRvay09NAzEf=s2048?key=9sB5KGCgr7SA4UzQBsPuaA",
-    votes: 1
-  }
+  { title: "Avant l'Aube", image: "cover-01.png", votes: 0, aliases: [] },
+  { title: "Laissez-moi brûler", image: "cover-02.png", votes: 0, aliases: [] },
+  { title: "Touche pas à ma sœur", image: "cover-03.png", votes: 0, aliases: ["Touche pas à ma soeur"] },
+  { title: "J'veux sortir", image: "cover-04.png", votes: 0, aliases: ["J'veus sortir"] },
+  { title: "Le bruit du Silence", image: "cover-05.png", votes: 0, aliases: ["Le bruit du silence"] },
+  { title: "J'ai rampé hors du sous-sol", image: "cover-06.png", votes: 0, aliases: [] },
+  { title: "On se l'était promis", image: "cover-07.png", votes: 0, aliases: ["On se l'était dit"] },
+  { title: "Le Monde est plus grand", image: "cover-08.png", votes: 0, aliases: ["Le monde est plus grand"] },
+  { title: "Je suis rentré chez moi", image: "cover-09.png", votes: 0, aliases: ["Je suis rentre chez moi"] },
+  { title: "J'ai oublié de vivre", image: "cover-10.png", votes: 0, aliases: [] },
+  { title: "Pourquoi on court ?", image: "cover-11.png", votes: 0, aliases: ["Pourquoi on court"] }
 ];
+
+const SONG_BY_NORMALISED_TITLE = new Map();
+ATN_TITLES.forEach(song => {
+  SONG_BY_NORMALISED_TITLE.set(normaliseTitle(song.title), song);
+  (song.aliases || []).forEach(alias => SONG_BY_NORMALISED_TITLE.set(normaliseTitle(alias), song));
+});
 
 let previousVotes = {};
 let previousOrder = [];
@@ -112,35 +74,58 @@ function normaliseTitle(title) {
     .trim()
     .toLowerCase()
     .replace(/[’]/g, "'")
-    .replace(/œ/g, "oe");
+    .replace(/œ/g, "oe")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/\s+/g, " ")
+    .replace(/\?$/g, "")
+    .trim();
+}
+
+function getCanonicalSong(title) {
+  return SONG_BY_NORMALISED_TITLE.get(normaliseTitle(title));
 }
 
 function getFallbackSongs() {
-  return [...ATN_TITLES]
-    .map(song => ({ ...song }))
-    .sort((a, b) => b.votes - a.votes || a.title.localeCompare(b.title, "fr"));
+  return ATN_TITLES.map(song => ({
+    title: song.title,
+    image: song.image,
+    votes: song.votes || 0
+  }));
 }
 
 function parseRankingCSV(text) {
   const lines = text.trim().split(/\r?\n/).slice(1);
+  const grouped = new Map();
 
-  const songs = lines.map(line => {
+  lines.forEach(line => {
+    if (!line.trim()) return;
     const c = splitCSV(line);
 
-    const rankedTitle = c[2] || c[0] || "";
-    const rankedVotes = c[3] || c[1] || "0";
-    const rankedImage = c[5] || "";
+    const rawTitle = c[2] || c[0] || "";
+    const rawVotes = c[3] || c[1] || "0";
+    const votes = Number(rawVotes) || 0;
 
-    const fallback = ATN_TITLES.find(song => normaliseTitle(song.title) === normaliseTitle(rankedTitle));
+    if (!rawTitle || /^classement$/i.test(rawTitle) || /^titre$/i.test(rawTitle)) return;
 
-    return {
-      title: rankedTitle,
-      votes: Number(rankedVotes) || 0,
-      image: rankedImage || (fallback ? fallback.image : "")
-    };
-  }).filter(song => song.title && !/^classement$/i.test(song.title) && !/^titre$/i.test(song.title));
+    const canonical = getCanonicalSong(rawTitle);
+    const title = canonical ? canonical.title : rawTitle;
+    const image = canonical ? canonical.image : (c[5] || "");
+    const key = normaliseTitle(title);
 
-  return songs;
+    if (!grouped.has(key)) {
+      grouped.set(key, { title, votes: 0, image });
+    }
+
+    grouped.get(key).votes += votes;
+  });
+
+  const officialOrder = new Map(ATN_TITLES.map((song, index) => [normaliseTitle(song.title), index]));
+
+  return Array.from(grouped.values()).sort((a, b) => {
+    if (b.votes !== a.votes) return b.votes - a.votes;
+    return (officialOrder.get(normaliseTitle(a.title)) ?? 999) - (officialOrder.get(normaliseTitle(b.title)) ?? 999);
+  });
 }
 
 function renderRanking(songs, options = {}) {
@@ -175,7 +160,7 @@ function renderRanking(songs, options = {}) {
     item.innerHTML = `
       <div class="rank">${medal(index)}</div>
       <img class="cover" src="${song.image}" alt="Pochette ${song.title}">
-      <div>
+      <div class="ranking-info">
         <div class="title">${song.title}</div>
         ${badgeText ? `<div class="badge">${badgeText}</div>` : ``}
         <div class="bar-bg">
@@ -258,7 +243,7 @@ function initVote() {
     card.className = "vote-card";
     card.innerHTML = `
       <img class="vote-cover" src="${song.image}" alt="Pochette ${song.title}">
-      <small>TITRE ${String(index + 1).padStart(2, "0")}</small>
+      <small>${String(index + 1).padStart(2, "0")}</small>
       <h3>${song.title}</h3>
     `;
 
